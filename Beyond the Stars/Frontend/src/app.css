@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/*noinspection ALL*/
+@theme {
+  --font-display: "Russo One", sans-serif;
+  --spacing: 0.25rem;
+}
