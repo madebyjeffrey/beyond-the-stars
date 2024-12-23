@@ -1,7 +1,11 @@
 @import "tailwindcss";
+@import './theme.css';
 
-/*noinspection ALL*/
-@theme {
-  --font-display: "Russo One", sans-serif;
-  --spacing: 0.25rem;
+/*noinspection CssInvalidAtRule*/
+@source "../index.html";
+
+html {
+  @apply h-dvh;
+  overscroll-behavior: none;
+  background-color: black;
 }

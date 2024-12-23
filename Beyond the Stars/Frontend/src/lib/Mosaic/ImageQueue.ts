@@ -1,15 +1,14 @@
-import type { MosaicTileType } from './MosaicConfig';
 import { shuffle } from '../Shuffle';
 
 export class ImageQueue {
-	#images: MosaicTileType[] = [];
+	#images: string[] = [];
 	#index: number = -1;
 
 	#shuffle() {
 		shuffle(this.#images, { inplace: true });
 	}
 
-	addImages(...images: MosaicTileType[]) {
+	addImages(...images: string[]) {
 		this.#images.push(...images);
 	}
 

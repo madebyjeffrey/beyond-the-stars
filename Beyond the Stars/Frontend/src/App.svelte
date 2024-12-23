@@ -1,7 +1,10 @@
 <script lang="ts">
-	import Mosaic from './lib/Mosaic/Mosaic.svelte';
+	import { Router } from '@mateothegreat/svelte5-router';
+	import type { Route } from '@mateothegreat/svelte5-router';
+
+	const routes: Route[] = [
+		{ path: '/', component: async () => import('./lib/Mosaic/Mosaic.svelte') }
+	];
 </script>
 
-<main>
-	<Mosaic></Mosaic>
-</main>
+<Router basePath="/" {routes} />
